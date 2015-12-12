@@ -1,8 +1,8 @@
-!SECTION Introduction
+SECTION Introduction
 
 ----------------------------------------------------------------------
 
-HEAD Don't be impressed
+Don't be impressed
 
 	I am describing some very impressive work, in my opinion,  but I
 	didn't do very much of it
@@ -12,7 +12,7 @@ HEAD Don't be impressed
 
 ---------------------------------------------------------------------
 
-HEAD Rabies is an under-rated disease
+Rabies is an under-rated disease
 
 	Poorly reported, little international concern
 
@@ -29,15 +29,15 @@ HEAD Rabies is an under-rated disease
 
 ----------------------------------------------------------------------
 
-HEAD Burden of some zoonotic diseases
+Burden of some zoonotic diseases
 
-SCALEFIG 0.8 burden.png
+SCALEFIG 0.8 figs/burden.png
 
-CAPTION Lembo et.\ al, PLoS NTDs
+CREDIT Lembo et.\ al, PLoS NTDs
 
 ----------------------------------------------------------------------
 
-HEAD Rabies can be controlled
+Rabies can be controlled
 
 	The public health burden of rabies is overwhelmingly due to _canine_
 	rabies
@@ -53,11 +53,11 @@ HEAD Rabies can be controlled
 
 ----------------------------------------------------------------------
 
-!SECTION Reservoirs
+SECTION Reservoirs
 
 ----------------------------------------------------------------------
 
-HEAD Inter-population spread
+Inter-population spread
 
 	Simple models of disease spread between multiple populations
 	elucidate several concepts
@@ -77,7 +77,7 @@ HEAD Inter-population spread
 
 ----------------------------------------------------------------------
 
-HEAD Serengeti study 
+Serengeti study 
 
 	Studied spread of rabies in carnivores in Serengeti national park,
 	and two adjacent districts
@@ -94,15 +94,15 @@ HEAD Serengeti study
 
 ----------------------------------------------------------------------
 
-HEAD Rabies cases identified
+Rabies cases identified
 
-SCALEFIG 0.8 surveillance.png
+SCALEFIG 0.8 figs/surveillance.png
 
-CAPTION Lembo et al. 2008 J. App.\ Ecol.
+CREDIT Lembo et al. 2008 J. App.\ Ecol.
 
 ----------------------------------------------------------------------
 
-HEAD Control implications
+Control implications
 
 	We compare the data to the behaviour of simple models
 
@@ -120,11 +120,11 @@ HEAD Control implications
 
 ----------------------------------------------------------------------
 
-!SECTION Synchrony and periodicity
+SECTION Synchrony and periodicity
 
 ----------------------------------------------------------------------
 
-HEAD Spatiotemporal patterns of rabies in Africa
+Spatiotemporal patterns of rabies in Africa
 
 	Collected all available time series data for rabies incidence in
 	either dogs or humans going back about 70 years
@@ -133,15 +133,15 @@ HEAD Spatiotemporal patterns of rabies in Africa
 
 ----------------------------------------------------------------------
 
-HEAD Spatiotemporal patterns of rabies in Africa
+Spatiotemporal patterns of rabies in Africa
 
-SCALEFIG 0.8 synchrony/F1incidence.talk.png
+SCALEFIG 0.8 figs/synchrony/F1incidence.talk.png
 
-CAPTION Hampson et al., PNAS, 2007
+CREDIT Hampson et al., PNAS, 2007
 
 ----------------------------------------------------------------------
 
-HEAD Investigating pattern
+Investigating pattern
 
 	We thought that these time series looked periodic, and correlated
 
@@ -151,7 +151,7 @@ HEAD Investigating pattern
 
 ----------------------------------------------------------------------
 
-HEAD Synchrony
+Synchrony
 
 	Is there more evidence for synchrony than you would expect if you
 	scrambled the time series?
@@ -169,13 +169,13 @@ HEAD Synchrony
 
 ----------------------------------------------------------------------
 
-HEAD Geographic correlations
+Geographic correlations
 
-SCALEFIG 0.9 synchrony/Geography.pdf
+SCALEFIG 0.9 figs/synchrony/Geography.pdf
 
 ----------------------------------------------------------------------
 
-HEAD Geographic correlations
+Geographic correlations
 
 	We cannot apply regular regression techniques to these points,
 	because they have a strong and complex correlation structure
@@ -194,7 +194,7 @@ HEAD Geographic correlations
 
 ----------------------------------------------------------------------
 
-HEAD Periodicity
+Periodicity
 
 	Testing conservatively for periodicity in time series is hard
 
@@ -210,7 +210,7 @@ HEAD Periodicity
 
 ----------------------------------------------------------------------
 
-HEAD Explaining fast cycles
+Explaining fast cycles
 
 	We found evidence for cycles faster than those predicted by
 	published rabies models
@@ -228,7 +228,7 @@ HEAD Explaining fast cycles
 
 ----------------------------------------------------------------------
 
-HEAD A simple model
+A simple model
 
 	We added a ``response'' variable to a simple model of rabies
 	transmission with vaccination
@@ -244,13 +244,13 @@ HEAD A simple model
 
 ----------------------------------------------------------------------
 
-HEAD Model results
+Model results
 
-SCALEFIG 0.9 response_model.png
+SCALEFIG 0.9 figs/response_model.png
 
 ----------------------------------------------------------------------
 
-HEAD Conclusions
+Conclusions
 
 	Rabies in Africa is synchronous and periodic
 
@@ -265,11 +265,11 @@ HEAD Conclusions
 
 ----------------------------------------------------------------------
 
-!SECTION Transmission
+SECTION Transmission
 
 ----------------------------------------------------------------------
 
-HEAD NW Tanzania study
+NW Tanzania study
 
 	A remarkable effort at contact tracing, ongoing for many years
 
@@ -287,21 +287,21 @@ HEAD NW Tanzania study
 
 ----------------------------------------------------------------------
 
-HEAD Contact tracing
+Contact tracing
 
-SCALEFIG 0.8 tz_cases.png
+SCALEFIG 0.8 figs/tz_cases.png
 
-CAPTION Hampson et al.\ PLoS Biology
-
-----------------------------------------------------------------------
-
-HEAD Contact tracing
-
-SCALEFIG 0.9 Boyd3.png
+CREDIT Hampson et al.\ PLoS Biology
 
 ----------------------------------------------------------------------
 
-HEAD Distributions
+Contact tracing
+
+SCALEFIG 0.9 figs/Boyd3.png
+
+----------------------------------------------------------------------
+
+Distributions
 
 	We used maximum likelihood estimation to fit time distributions to
 	both the latent period and the infectious period
@@ -316,13 +316,13 @@ HEAD Distributions
 
 ----------------------------------------------------------------------
 
-HEAD Time distributions
+Time distributions
 
-SCALEFIG 0.9 rabies_times.png
+SCALEFIG 0.9 figs/rabies_times.png
 
 ----------------------------------------------------------------------
 
-HEAD Estimating $R_0$
+Estimating $R_0$
 
 	We estimated $R_0$ in three ways:
 
@@ -338,13 +338,13 @@ HEAD Estimating $R_0$
 
 ----------------------------------------------------------------------
 
-HEAD Estimating $R_0$
+Estimating $R_0$
 
-SCALEFIG 0.9 rabiesR0.png
+SCALEFIG 0.9 figs/rabiesR0.png
 
 ----------------------------------------------------------------------
 
-HEAD Vaccination
+Vaccination
 
 	We sponsored vaccination campaigns in the study area
 
@@ -357,19 +357,19 @@ HEAD Vaccination
 
 ----------------------------------------------------------------------
 
-HEAD Vaccination campaigns
+Vaccination campaigns
 
-SCALEFIG 0.9 Boyd12.png
-
-----------------------------------------------------------------------
-
-HEAD Vaccination and outbreaks
-
-SCALEFIG 0.9 outbreak.png
+SCALEFIG 0.9 figs/Boyd12.png
 
 ----------------------------------------------------------------------
 
-HEAD Demography
+Vaccination and outbreaks
+
+SCALEFIG 0.9 figs/outbreak.png
+
+----------------------------------------------------------------------
+
+Demography
 
 	We studied dog demography in the region
 
@@ -378,7 +378,7 @@ HEAD Demography
 
 ----------------------------------------------------------------------
 
-HEAD Conclusions
+Conclusions
 
 	Low $R_0$ means that elimination of canine rabies and thus the
 	public health threat of rabies is possible in this area
@@ -391,7 +391,7 @@ HEAD Conclusions
 
 ----------------------------------------------------------------------
 
-HEAD Open questions
+Open questions
 
 	Why is $R_0$ for rabies so consistently low?
 
@@ -402,8 +402,8 @@ HEAD Open questions
 
 ----------------------------------------------------------------------
 
-HEAD Thanks
+Thanks
 
-SCALEFIG 0.8 Boyd7.png
+SCALEFIG 0.8 figs/Boyd7.png
 
 Katie Hampson, Tiziana Lembo, many others

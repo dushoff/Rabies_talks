@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: notarget 
+target pngtarget pdftarget vtarget acrtarget: rabies.draft.pdf 
 
 ##################################################################
 
@@ -18,15 +18,16 @@ include stuff.mk
 ## Content
 
 Sources += rabies.txt
+rabies.draft.pdf: rabies.txt
 
-######################################################################
+## Directories
 
-## Crib
+subdirs += figs talkdir
+figs = $(Drop)/dimacs/figs
 
-crib = /home/dushoff/Dropbox/ICI3D/dimacs/talk/
-
-$(Sources):
-	$(ccrib)
+Makefile: $(subdirs)
+$(subdirs):
+	ln -s $($@) $@
 
 ######################################################################
 
