@@ -22,7 +22,7 @@ SECTION Introduction
 
 Rabies is an under-rated disease
 
-SCALEFIG 0.8 burden.png
+SCALEFIG 0.8 figs/burden.png
 
 CREDIT Lembo et.\ al, PLoS NTDs
 

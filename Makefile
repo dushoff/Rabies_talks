@@ -25,17 +25,19 @@ rabies.draft.pdf: rabies.txt
 subdirs += figs talkdir
 figs = $(Drop)/dimacs/figs
 
-figs/%: $(wildcard figs/*)
+figs/%: 
 	cd figs && $(MAKE) $*
 
 Makefile: $(subdirs)
 $(subdirs):
 	ln -s $($@) $@
 
+Sources += beamer.fmt
+
 ### Archive
 
 ##### TEMP!! ######
-Archive += rabies.slides.pdf
+# Archive += rabies.slides.pdf
 
 Archive += $(wildcard archive/*)
 
