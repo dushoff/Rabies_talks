@@ -1,124 +1,51 @@
+Modeling the control of canine rabies
+
+\vfill
+
+Jonathan Dushoff, McMaster University
+
+\url{http://lalashan.mcmaster.ca/DushoffLab}
+
+\vfill
+
+DAIDD 2015
+
+\url{http://www.ici3d.org/daidd/}
+
+\vfill
+
+----------------------------------------------------------------------
+
 SECTION Introduction
 
 ----------------------------------------------------------------------
 
-Don't be impressed
-
-	I am describing some very impressive work, in my opinion,  but I
-	didn't do very much of it
-
-	Just helped with modeling and statistical details (and some
-	logistical advice, writing, etc.)
-
----------------------------------------------------------------------
-
 Rabies is an under-rated disease
 
-	Poorly reported, little international concern
-
-	Believed to be responsible for $>50,000$ human deaths per year
-
-	Fear, psychological trauma
-
-		We tend to fear things that are explicitly violent, and things we
-		can't control
-
-		Symptoms and death are horrible
-
-	Economic burden of treatment
-
-----------------------------------------------------------------------
-
-Burden of some zoonotic diseases
-
-SCALEFIG 0.8 figs/burden.png
+SCALEFIG 0.8 burden.png
 
 CREDIT Lembo et.\ al, PLoS NTDs
 
 ----------------------------------------------------------------------
 
-Rabies can be controlled
+Rabies is scary
 
-	The public health burden of rabies is overwhelmingly due to _canine_
-	rabies
-
-	In most or all parts of the world, canine rabies can be eliminated
-	by domestic dog vaccination
-
-		Domestic dogs are the key reservoir of canine rabies
-
-		Vaccination is highly effective, people are interested
-
-	The problem is one of sustained commitment and co-ordination
+WIDEFIG figs/dog_drawing.jpg
 
 ----------------------------------------------------------------------
 
-SECTION Reservoirs
+Rabies is expensive
+
+WIDEFIG figs/typhoid.jpg
 
 ----------------------------------------------------------------------
 
-Inter-population spread
+Effective, economical control measures are available
 
-	Simple models of disease spread between multiple populations
-	elucidate several concepts
-
-		A _reservoir_ is a group of populations which can maintain
-		the disease together, and transmit disease to other populations
-
-		A _maintenance population_ is a population which could sustain
-		the disease by itself
-
-	A reservoir may or may not have a maintenance population
-
-		Some diseases persist by relying on multiple populations
-
-	To eliminate disease, it is necessary, but not sufficient, to
-	eliminate ``maintenance-ness''
+WIDEFIG figs/indian_vaccine.jpg
 
 ----------------------------------------------------------------------
 
-Serengeti study 
-
-	Studied spread of rabies in carnivores in Serengeti national park,
-	and two adjacent districts
-
-	Combined genetic, tracing and spatiotemporal data to find: 
-
-		Rabies is transmitted between species, but not as often as within
-		species
-
-		Transmission in domestic dogs is persistent
-
-		Transmission in other carnivores is sporadic (even when these are
-		taken as a group)
-
-----------------------------------------------------------------------
-
-Rabies cases identified
-
-SCALEFIG 0.8 figs/surveillance.png
-
-CREDIT Lembo et al. 2008 J. App.\ Ecol.
-
-----------------------------------------------------------------------
-
-Control implications
-
-	We compare the data to the behaviour of simple models
-
-	We believe that domestic dogs are a maintenance population
-
-	We believe that wild carnivores are _not_ a maintenance population
-
-	Conclusion: there is some level of reduction in domestic dogs
-	alone that would eliminate disease transmission
-
-		This level is higher than would be necessary in the absence of
-		inter-species transmission
-
-		This level may or may not be achievable
-
-----------------------------------------------------------------------
 
 SECTION Synchrony and periodicity
 
@@ -126,46 +53,37 @@ SECTION Synchrony and periodicity
 
 Spatiotemporal patterns of rabies in Africa
 
-	Collected all available time series data for rabies incidence in
-	either dogs or humans going back about 70 years
-
-	Data and scripts all available online
-
-----------------------------------------------------------------------
-
-Spatiotemporal patterns of rabies in Africa
-
-SCALEFIG 0.8 figs/synchrony/F1incidence.talk.png
+WIDEFIG figs/synchrony/F1incidence.talk.png
 
 CREDIT Hampson et al., PNAS, 2007
 
 ----------------------------------------------------------------------
 
-Investigating pattern
+Synchrony
 
-	We thought that these time series looked periodic, and correlated
+BC
 
-	How to evaluate the evidence?
+COLFIG figs/synchrony/F1incidence.talk.png
 
-	We used a variety of permutation tests
+NC
+
+	What is a fair way to compare these to a null (unsynchronized) model?
+
+EC
 
 ----------------------------------------------------------------------
 
 Synchrony
 
-	Is there more evidence for synchrony than you would expect if you
-	scrambled the time series?
+BC
 
-		Yes, but this does not seem like a fair test
+COLFIG figs/synchrony/F1incidence.talk.png
 
-	Instead, we ``offset'' the time series by random amounts (wrapping
-	back around to the beginning as necessary)
+NC
 
-	To avoid multiple comparisons, we based our conclusion on a ``grand
-	statistic'' 
-	
-		ie., add up all the evidence for synchrony from all countries
-		into one number, compare this to what's expected at random
+	Randomize starting points, not each point individually
+
+EC
 
 ----------------------------------------------------------------------
 
@@ -177,74 +95,61 @@ SCALEFIG 0.9 figs/synchrony/Geography.pdf
 
 Geographic correlations
 
-	We cannot apply regular regression techniques to these points,
-	because they have a strong and complex correlation structure
+BC
 
-		Ie., we have 36 distances determined in each case by only 9
-		actual points
+COLFIG figs/synchrony/Geography.pdf
 
-	We therefore test by randomizing a variable associated with the
-	countries (related or equivalent to Mantel test)
+NC
 
-	After appropriate correction, there was no significant relationship
-	between pairwise distance and pairwise correlation between countries
+	What is a fair way to compare _these_ to a null model
 
-	This does not mean there is no such relationship, only that we did
-	not find strong evidence to support it
+EC
+
+----------------------------------------------------------------------
+
+Geographic correlations
+
+BC
+
+COLFIG figs/synchrony/Geography.pdf
+
+NC
+
+	Randomize one of the _country lists_, not the individual points
+
+EC
 
 ----------------------------------------------------------------------
 
 Periodicity
 
-	Testing conservatively for periodicity in time series is hard
+WIDEFIG figs/synchrony/F1incidence.talk.png
 
-	There are many possible periods
+	What is a fair way to compare these to a null (non-periodic) model?
 
-	It is not possible to test without scrambling the series
+----------------------------------------------------------------------
 
-	We tested by scrambling the first-order differences between points
+Periodicity
 
-		Scrambling points destroys all auto-correlation
+WIDEFIG figs/synchrony/F1incidence.talk.png
 
-	Found strong overall evidence for fast cycling
+	Randomize _differences_ rather than observations
+
+----------------------------------------------------------------------
+
+Results
+
+	Rabies in Africa is
+
+		Synchronized at a large spatial scale
+
+		Periodic
+
+		Fast (ie., cycles are faster than simple models can predict)
 
 ----------------------------------------------------------------------
 
 Explaining fast cycles
-
-	We found evidence for cycles faster than those predicted by
-	published rabies models
-
-	Based on our experience in the field and in the meeting room, we
-	thought this was due to changes in human behavior at various levels:
-
-		Governments allocate resources to rabies
-
-		Veterinary officers respond to rabies
-
-		Dog owners tie or kill suspected dogs
-
-	We suspect all these behaviors ebb and flow with rabies prevalence
-
-----------------------------------------------------------------------
-
-A simple model
-
-	We added a ``response'' variable to a simple model of rabies
-	transmission with vaccination
-
-	The ``response'' level tracks the incidence of rabies, but with a
-	characteristic delay
-
-	For realistic parameter values, we find that response can accelerate
-	the period of rabies epidemics to observed levels
-
-	We also find some direct evidence of changes in response, ie., by
-	looking at vaccination efforts
-
-----------------------------------------------------------------------
-
-Model results
 
 SCALEFIG 0.9 figs/response_model.png
 
@@ -265,29 +170,105 @@ Conclusions
 
 ----------------------------------------------------------------------
 
-SECTION Transmission
+SECTION Reservoirs
+
+----------------------------------------------------------------------
+
+Multiple populations
+
+WIDEFIG figs/hyenas.jpg
+
+----------------------------------------------------------------------
+
+Maintenance populations
+
+FIG figs/reservoir.jpg
 
 ----------------------------------------------------------------------
 
 NW Tanzania study
 
-	A remarkable effort at contact tracing, ongoing for many years
+SCALEFIG 0.8 figs/tz_cases.png
 
-		Surveillance is now done mostly by field officers trained by the
-		project
-
-	Published study analyzes $>3000$ potential transmission events and
-	identifies $>1000$ rabid animals
-
-	These data are all available; we are working to make them all
-	accessible
-
-	We are also working to make the even greater amount of data
-	collected since then available and accessible
+CREDIT Hampson et al.\ PLoS Biology
 
 ----------------------------------------------------------------------
 
-Contact tracing
+Ngorongoro district
+
+FIG figs/pastoralist.jpg
+
+----------------------------------------------------------------------
+
+Serengeti district
+
+FIG figs/nyamongo.jpg
+
+----------------------------------------------------------------------
+
+Rabies cases identified
+
+FIG figs/lembo_spp.jpg
+
+CREDIT Lembo et al. 2008 J. App.\ Ecol.
+
+----------------------------------------------------------------------
+
+Model fitting
+
+BC
+
+WIDEFIG figs/lembo_ts.jpg
+
+NC
+
+	Domestic dogs are a maintenance population
+
+	Wild carnivores as a whole are not
+
+EC
+
+----------------------------------------------------------------------
+
+Model fitting
+
+BC
+
+WIDEFIG figs/lembo_ts.jpg
+
+NC
+
+	Some amount of intervention in dogs alone should eliminate rabies
+	circulation in this population
+
+	No amount of intervention in the carnivore population alone will do this
+
+EC
+
+----------------------------------------------------------------------
+
+Model fitting
+
+BC
+
+COLFIG figs/reservoir.jpg
+
+NC
+
+	Some amount of intervention in dogs alone should eliminate rabies
+	circulation in this population
+
+	No amount of intervention in the carnivore population alone will do this
+
+EC
+
+----------------------------------------------------------------------
+
+SECTION Transmission details
+
+----------------------------------------------------------------------
+
+Serengeti and Ngorongoro districts
 
 SCALEFIG 0.8 figs/tz_cases.png
 
@@ -302,19 +283,6 @@ SCALEFIG 0.9 figs/Boyd3.png
 ----------------------------------------------------------------------
 
 Distributions
-
-	We used maximum likelihood estimation to fit time distributions to
-	both the latent period and the infectious period
-
-	We also fit distributions to the number of observed potential
-	transmission events by a rabid animal (ie., the number of
-	individuals bitten) ...
-
-	and to the spatial distribution (ie., how far do rabid animals
-	travel; how far are bite events by the animal from the bite event
-	that infected the animal)
-
-----------------------------------------------------------------------
 
 Time distributions
 
@@ -344,19 +312,6 @@ SCALEFIG 0.9 figs/rabiesR0.png
 
 ----------------------------------------------------------------------
 
-Vaccination
-
-	We sponsored vaccination campaigns in the study area
-
-	The government also sponsored some
-
-	We find a strong correlation between inferred level of protection
-	and size of rabies outbreaks
-
-		This correlation is explained fairly well by stochastic models
-
-----------------------------------------------------------------------
-
 Vaccination campaigns
 
 SCALEFIG 0.9 figs/Boyd12.png
@@ -371,10 +326,7 @@ SCALEFIG 0.9 figs/outbreak.png
 
 Demography
 
-	We studied dog demography in the region
-
-	High birth and death rates make it hard to maintain high levels of
-	vaccine coverage
+WIDEFIG figs/puppies.jpg
 
 ----------------------------------------------------------------------
 
@@ -393,12 +345,9 @@ Conclusions
 
 Open questions
 
-	Why is $R_0$ for rabies so consistently low?
+	Why is $R_0$ for domestic dog transmission of rabies so consistently low?
 
 	Why is there little effect of dog density?
-
-	What happens to transmission when dog density is reduced by rabies
-	mortality?
 
 ----------------------------------------------------------------------
 
@@ -406,4 +355,4 @@ Thanks
 
 SCALEFIG 0.8 figs/Boyd7.png
 
-Katie Hampson, Tiziana Lembo, many others
+CREDIT Katie Hampson, Tiziana Lembo, many others
