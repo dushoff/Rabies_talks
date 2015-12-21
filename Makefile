@@ -22,15 +22,15 @@ rabies.draft.pdf: rabies.txt
 
 ## Directories
 
-subdirs += figs talkdir
-figs = $(Drop)/dimacs/figs
+talkdir:
+	/bin/ln -s $(ms)/talk $@
 
+
+figs = $(Drop)/dimacs/figs
+figs:
+	/bin/ln -s $(figs) $@
 figs/%: 
 	cd figs && $(MAKE) $*
-
-Makefile: $(subdirs)
-$(subdirs):
-	ln -s $($@) $@
 
 Sources += beamer.fmt
 
