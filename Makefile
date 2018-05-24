@@ -1,4 +1,5 @@
 # Rabies_talks
+# Rabies_talks
 ### Hooks for the editor to set the default target
 current: target
 
@@ -8,8 +9,11 @@ target pngtarget pdftarget vtarget acrtarget: rabies.draft.pdf
 
 # make files
 
-Sources = Makefile .gitignore README.md stuff.mk LICENSE.md
+Sources += Makefile .ignore README.md stuff.mk LICENSE.md
+Ignore += .gitignore
 include stuff.mk
+-include $(ms)/os.mk
+
 -include $(ms)/talk.def
 -include $(ms)/perl.def
 
@@ -22,10 +26,6 @@ rabies.draft.pdf: rabies.txt
 
 ## Directories
 
-talkdir:
-	/bin/ln -s $(ms)/talk $@
-
-
 figs = $(Drop)/dimacs/figs
 figs:
 	/bin/ln -s $(figs) $@
@@ -33,25 +33,6 @@ figs/%:
 	cd figs && $(MAKE) $*
 
 Sources += beamer.fmt
-
-### Archive
-
-##### TEMP!! ######
-# Archive += rabies.slides.pdf
-
-Archive += $(wildcard archive/*)
-
-rabies.slides.pdf: rabies.draft.pdf
-	$(copy)
-
-archive/%.pdf: archive
-	$(MAKE) rabies.slides.pdf
-	$(CP) rabies.slides.pdf $@
-
-archive:
-	mkdir $@
-
-######################################################################
 
 ### Makestuff
 
@@ -63,4 +44,4 @@ archive:
 
 -include $(ms)/wrapR.mk
 -include $(ms)/newlatex.mk
--include $(ms)/talk.mk
+-include $(ms)/newtalk.mk
