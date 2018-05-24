@@ -9,10 +9,19 @@ target pngtarget pdftarget vtarget acrtarget: rabies.draft.pdf
 
 # make files
 
-Sources += Makefile .ignore README.md stuff.mk LICENSE.md
+Sources += Makefile .ignore README.md LICENSE.md
 Ignore += .gitignore
-include stuff.mk
+
+msrepo = https://github.com/dushoff
+ms = makestuff
+Ignore += local.mk
+-include local.mk
 -include $(ms)/os.mk
+
+Ignore += $(ms)
+Makefile: $(ms) $(ms)/Makefile
+$(ms):
+	git clone $(msrepo)/$(ms)
 
 -include $(ms)/talk.def
 -include $(ms)/perl.def
@@ -35,9 +44,6 @@ figs/%:
 Sources += beamer.fmt
 
 ### Makestuff
-
-## Change this name to download a new version of the makestuff directory
-# Makefile: start.makestuff
 
 -include $(ms)/git.mk
 -include $(ms)/visual.mk
