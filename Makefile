@@ -35,6 +35,7 @@ rabies.draft.pdf: rabies.txt
 
 ## Directories
 
+Ignore += figs
 figs = ~/Dropbox/ICI3D/dimacs/figs
 figs:
 	/bin/ln -s $(figs) $@
